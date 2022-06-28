@@ -82,15 +82,15 @@ digraph G {
     {
         rank = same
         node[style=filled, fillcolor=9]
+        Taller [label=<Taller de<br/>Tesina<br/><FONT POINT-SIZE="10">Requiere todo</FONT>>]
         Practica [label=<Práctica<br/>Profesional<br/><FONT POINT-SIZE="10">Requiere todo</FONT>>]
-        SegInf [label="Seguridad\nInformática"]
         r9 [label="5° año\n1° semestre"]
     }
 
     {
         rank = same
         node[style=filled, fillcolor=9]
-        Taller [label=<Taller de<br/>Tesina<br/><FONT POINT-SIZE="10">Requiere todo</FONT>>]
+        SegInf [label="Seguridad\nInformática"]
         Tesina [label=<Tesina<FONT POINT-SIZE="10"><br/>La putisima tesina</FONT>>]
         r10 [label="5° año\n2° semestre"]
     }
