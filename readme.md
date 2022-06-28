@@ -4,5 +4,12 @@ Código para generar un árbol de correlativas para la carrera de Licenciatura e
 
 ## Compilación
 
-Hay que tener Graphviz para compilarlo
+Hay que tener Graphviz para compilarlo, después hay que instalar las dos fuentes que están en el repo y por último correr (por lo menos en linux)
 
+```sh
+dot -Tpng correlativas.dot > correlativas.png
+```
+
+---
+
+![Árbol de correlativas actual](correlativas.png)
