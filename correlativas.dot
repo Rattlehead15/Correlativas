@@ -104,7 +104,7 @@ digraph G {
     r7 -> r8 [style=invis]
     r8 -> r9 [style=invis]
     r9 -> r10 [style=invis]
-    SegInf -> Practica [style=invis]
+    SegInf -> Tesina [style=invis]
     Practica -> Taller [style=invis]
     Taller -> Tesina [style=invis]
 
