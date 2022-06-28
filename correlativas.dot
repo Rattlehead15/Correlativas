@@ -1,0 +1,155 @@
+digraph G {
+    node[shape=box, color=9, colorscheme=pastel19, penwidth=2, fontname="BigNoodleTitling"]
+    edge[colorscheme=pastel19, penwidth=1.5, arrowsize=0.5]
+    splines=ortho
+    overlap=scale
+    bgcolor=grey14
+
+    {
+        rank = same
+        node[style=filled, fillcolor=1]
+        AyGA1 [label="Álgebra y\nGeometría Analítica 1"]
+        Prog1 [label="Programación 1"]
+        AM1 [label="Análisis\nMatemático 1"]
+        r1 [label="1° año\n1° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=2]
+        AyGA2 [label="Álgebra y\nGeometría Analítica 2"]
+        Prog2 [label="Programación 2"]
+        AM2 [label="Análisis\nMatemático 2"]
+        r2 [label="1° año\n2° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=3]
+        ALineal [label="Álgebra\nLineal"]
+        EDyA1 [label="Estructuras de Datos\ny Algoritmos 1"]
+        LFyC [label="Lenguajes Formales\ny Computabilidad"]
+        r3 [label="2° año\n1° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=4]
+        Metodos [label="Métodos\nNuméricos"]
+        CM1 [label="Complementos de\nMatemática 1"]
+        Arqui [label="Arquitectura\ndel Computador"]
+        Logica [label="Lógica"]
+        r4 [label="2° año\n2° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=5]
+        ProbYEstd [label="Probabilidad\ny Estadística"]
+        EDyA2 [label="Estructuras de Datos\ny Algoritmos 2"]
+        SO1 [label="Sistemas\nOperativos 1"]
+        r5 [label="3° año\n1° semestre"]
+    }
+    
+    {
+        rank = same
+        node[style=filled, fillcolor=6]
+        ModFis [label="Modelos\nFísicos"]
+        Comm [label="Comunicaciones"]
+        ALP [label="Análisis de Lenguajes\nde Programación"]
+        TBD [label="Teoría de\nBases de Datos"]
+        r6 [label="3° año\n2° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=7]
+        Soft1 [label=<Ingeniería del<br/>Software 1<br/><FONT POINT-SIZE="10">Requiere inglés</FONT>>]
+        SO2 [label=<Sistemas<br/>Operativos 2<br/><FONT POINT-SIZE="10">Requiere inglés</FONT>>]
+        IIA [label=<Introducción a la<br/>Inteligencia Artificial<br/><FONT POINT-SIZE="10">Requiere inglés</FONT>>]
+        r7 [label="4° año\n1° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=8]
+        CM2 [label=<Complementos de<br/>Matemática 2<br/><FONT POINT-SIZE="10">Requiere inglés</FONT>>]
+        Soft2 [label="Ingeniería del\nSoftware 2"]
+        Compi [label=<Compiladores<br/><FONT POINT-SIZE="10">Requiere inglés</FONT>>]
+        r8 [label="4° año\n2° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=9]
+        Practica [label=<Práctica<br/>Profesional<br/><FONT POINT-SIZE="10">Requiere todo</FONT>>]
+        SegInf [label="Seguridad\nInformática"]
+        r9 [label="5° año\n1° semestre"]
+    }
+
+    {
+        rank = same
+        node[style=filled, fillcolor=9]
+        Taller [label=<Taller de<br/>Tesina<br/><FONT POINT-SIZE="10">Requiere todo</FONT>>]
+        Tesina [label=<Tesina<FONT POINT-SIZE="10"><br/>La putisima tesina</FONT>>]
+        r10 [label="5° año\n2° semestre"]
+    }
+
+    r1 -> r2 [style=invis]
+    r2 -> r3 [style=invis]
+    r3 -> r4 [style=invis]
+    r4 -> r5 [style=invis]
+    r5 -> r6 [style=invis]
+    r6 -> r7 [style=invis]
+    r7 -> r8 [style=invis]
+    r8 -> r9 [style=invis]
+    r9 -> r10 [style=invis]
+    SegInf -> Practica [style=invis]
+    Practica -> Taller [style=invis]
+    Taller -> Tesina [style=invis]
+
+    edge [color=1]
+    AyGA1 -> AyGA2 
+    Prog1 -> Prog2 
+    AM1 -> AM2
+    edge [color=2]
+    AyGA2 -> ALineal
+    Prog2 -> EDyA1 
+    Prog2 -> LFyC 
+    Prog2 -> Logica 
+    AM2 -> ProbYEstd 
+    AM2 -> Metodos 
+    AM2 -> CM2 
+    edge [color=3]
+    ALineal -> Metodos 
+    ALineal -> CM1 
+    ALineal -> CM2 
+    EDyA1 -> CM1 
+    EDyA1 -> Arqui 
+    edge [color=4]
+    CM1 -> EDyA2 
+    Arqui -> Comm 
+    Arqui -> SO1 
+    Logica -> CM2 
+    Logica -> TBD 
+    Logica -> ALP 
+    Logica -> Soft1 
+    LFyC -> Compi
+    edge [color=5]
+    ProbYEstd -> ModFis
+    EDyA2 -> TBD
+    EDyA2 -> ALP
+    EDyA2 -> Soft1
+    // Ingles -> CM2
+    // Ingles -> Soft1
+    // Ingles -> SO2
+    // Ingles -> IIA
+    // Ingles -> Compi
+    SO1 -> SO2
+    edge [color=6]
+    TBD -> IIA
+    ALP -> Compi
+    edge [color=7]
+    Soft1 -> Soft2
+    Soft1 -> SegInf
+}
